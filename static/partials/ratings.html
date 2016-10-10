@@ -1,0 +1,42 @@
+<div ng-controller="RatingController">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <form class="form-inline">
+                <strong>Summarized View</strong>
+                <select ng-model="selectedYear" class="pull-right" ng-options="x for x in ratingYears"
+                        ng-change="loadTable()"/>
+            </form>
+        </div>
+        <div class="panel-body">
+            <div class="col-lg-8 col-md-8">
+                <b><u>Color Notations</u></b> : <u>Dark Blue( Rating > 7) , Fair Blue( Rating 6-7) , Red (Rating <6)</u><br><br>
+                <img ng-src="static/images/{{ selectedYear }}.jpeg" class="img-responsive"/>
+            </div>
+
+            <div class="col-lg-4 col-md-4 scrollit">
+                <table class="table table-striped table-condensed table-hover table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Street</th>
+                        <th>Crack Rating</th>
+                        <th>Patch Rating</th>
+                        <th>Overall Rating</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="roadRating in roadRatings" ng-class-odd="'trOdd'" ng-class-even="'trEven'">
+                        <td>{{ roadRating.streetName }}</td>
+                        <td>{{ roadRating.crackCnt }}</td>
+                        <td>{{ roadRating.patchCnt }}</td>
+                        <td>{{ roadRating.overallCnt }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+

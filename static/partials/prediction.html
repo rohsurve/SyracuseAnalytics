@@ -1,0 +1,31 @@
+<div ng-controller="PredictionController">
+    <div class="row">
+        <div class="col-lg-offset-3 col-lg-offset-3 col-lg-6 col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3><strong>Average Road Rating Before/After Overlay</strong>
+                        <span class="pull-right" custom-popover popover-html="{{ roadRatingOverlayDesc }}"
+                              popover-placement="bottom"></span></h3>
+                </div>
+                <div class="panel-body">
+                    <img ng-src="static/images/charts/{{ roadRatingOverlay }}.jpg" class="img-responsive"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-offset-3 col-lg-offset-3 col-lg-6 col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3><strong>Forecasting with Linear Growth Model</strong>
+                    <span class="pull-right" custom-popover popover-html="{{ tempPredictPlotDesc }}"
+                              popover-placement="bottom"></span></h3>
+                </div>
+                <div class="panel-body">
+                    <img ng-src="static/images/charts/{{ tempPredictPlot }}.jpg" class="img-responsive"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

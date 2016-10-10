@@ -1,0 +1,107 @@
+<div ng-controller="OverviewController">
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3><strong>Road Rating By Year</strong>
+                        <span class="pull-right" custom-popover popover-html="{{ ratingsLineChartDesc }}"
+                              popover-placement="bottom"></span>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <img ng-src="static/images/charts/{{ ratingsLineChart }}.jpg" class="img-responsive"/>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3><strong>Road Condition Breakdown</strong>
+                    <span class="pull-right" custom-popover popover-html="{{ ratingsLineBreakDownDesc }}"
+                          popover-placement="bottom"></span></h3>
+
+                </div>
+                <div class="panel-body">
+                    <img ng-src="static/images/charts/{{ ratingsLineBreakDown }}.jpg"
+                         class="img-responsive"/>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3><strong>Road Rating By Traffic/Weather</strong>
+                     <span class="pull-right" custom-popover popover-html="{{ tempRoadPlotsDesc }}"
+                           popover-placement="bottom"></span></h3>
+                </div>
+                <div class="panel-body">
+                    <img ng-src="static/images/charts/{{ tempRoadPlots }}.jpg" class="img-responsive"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3><strong>Road Ratings Before/After Overlay</strong>
+                      <span class="pull-right" custom-popover popover-html="{{ overlayBarchartDesc }}"
+                            popover-placement="bottom"></span></h3>
+                </div>
+                <div class="panel-body">
+                    <img ng-src="static/images/charts/{{ overlayBarchart }}.jpg" class="img-responsive"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3><strong>Potholes Fixed for year 2016</strong>
+                     <span class="pull-right" custom-popover popover-html="{{ potholesBarchartDesc }}"
+                           popover-placement="bottom"></span></h3>
+                </div>
+                <div class="panel-body">
+                    <img ng-src="static/images/charts/{{ potholesBarchart }}.jpg" class="img-responsive"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3><strong>Hour/Day of the Week of Potholes fixed</strong>
+                     <span class="pull-right" custom-popover popover-html="{{ potholesDotchartDesc }}"
+                           popover-placement="bottom"></span></h3>
+                </div>
+                <div class="panel-body">
+                    <img ng-src="static/images/charts/{{ potholesDotchart }}.jpg" class="img-responsive"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="center-block"><strong>Calendar HeatMap of the potholes fixed</strong>
+                     <span class="pull-right" custom-popover popover-html="{{ potholesHeatMapDesc }}"
+                           popover-placement="bottom"></span></h3>
+                </div>
+                <div class="panel-body">
+                    <img ng-src="static/images/charts/{{ potholesHeatMap }}.jpg" class="img-responsive"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+

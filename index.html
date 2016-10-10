@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <title>Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'js/lib/bootstrap/css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'js/lib/bootstrap/css/bootstrap-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet"
+          href="http://tombatossals.github.io/angular-leaflet-directive/bower_components/leaflet/dist/leaflet.css">
+    <link rel="stylesheet"
+          href="http://tombatossals.github.io/angular-leaflet-directive/bower_components/leaflet-search/dist/leaflet-search.min.css">
+    <link rel="stylesheet"
+          href="http://tombatossals.github.io/angular-leaflet-directive/bower_components/Leaflet.label/dist/leaflet.label.css">
+
+    <script src="{% static 'js/lib/jquery-1.9.1.js' %}"></script>
+    <script src="{% static 'js/lib/jquery-ui.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/lib/bootstrap/js/bootstrap.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/lib/angular/angular.js' %}"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="http://tombatossals.github.io/angular-leaflet-directive/bower_components/leaflet/dist/leaflet.js"></script>
+    <script src="http://tombatossals.github.io/angular-leaflet-directive/bower_components/Leaflet.label/dist/leaflet.label.js"></script>
+    <script src="http://tombatossals.github.io/angular-leaflet-directive/bower_components/leaflet-search/dist/leaflet-search.src.js"></script>
+    <script type="text/javascript"
+            src="http://tombatossals.github.io/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/lib/d3/d3.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/lib/angular-bootstrap3-typeahead.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/modules/modules.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/factories/factories.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/controllers/controller.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/directives/directives.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/services/services.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/partialRoutes.js' %}"></script>
+    <style>
+        .scrollit {
+            overflow: scroll;
+            height: 600px;
+        }
+    </style>
+
+</head>
+<body>
+<div ng-app="app">
+
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">SYRACUSE ROAD ANALYTICS</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a ui-sref-active="active" ui-sref="home">Home</a></li>
+                <li><a ui-sref-active="active" ui-sref="overview">Overview</a></li>
+                <li><a ui-sref-active="active" ui-sref="prediction">Analysis</a></li>
+                <li><a ui-sref-active="active" ui-sref="aboutus">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div ui-view></div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
+</body>
+</html>
