@@ -12,8 +12,8 @@ Steps:
 2) Go inside folder : Eg : D:\SyracuseAnalytics\SyracuseAnalytics and run  python manage.py runserver
 
 Created By:
-Mindy
-Rohit Surve
-Yuan Zhuang
-Weidan Du
+Mindy,
+Rohit Surve,
+Yuan Zhuang,
+Weidan Du,
 Carrie
